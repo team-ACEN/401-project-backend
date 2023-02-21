@@ -19,7 +19,7 @@ from backend_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('streaming_services/', views.get_streaming_services),
     path('streaming_services/genres/', views.get_genres, name='streaming_services_genres'),
     path('streaming_services/search/', views.search, name='streaming_services_search'),
+    path('streaming_services/services/', views.get_services, name='streaming_services_services'),
 ]
