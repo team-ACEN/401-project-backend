@@ -11,8 +11,6 @@ class CustomUserAdmin(UserAdmin):
     list_display = [
         'email',
         'username',
-        'first_name',
-        'last_name',
         'genres',
         'services'
     ]

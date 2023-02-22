@@ -4,6 +4,13 @@ import os
 import requests
 import json
 load_dotenv()
+# from rest_framework.generics import (
+#     ListCreateAPIView,
+#     RetrieveUpdateDestroyAPIView,
+# )
+# from .models import Show, Movie
+# # from .permissions import IsOwnerOrReadOnly
+# from .serializers import ShowSerializer, MovieSerializer
 
 def get_genres(request):
     url = 'https://partner-api.reelgood.com/v1.0/meta/genres'
@@ -57,23 +64,23 @@ def trim_services(data):
     return trimmed_data
 
     
-    
-
+#
+#
 # class ShowList(ListCreateAPIView):
 #     queryset = Show.objects.all()
 #     serializer_class = ShowSerializer
-
-
+#
+#
 # class ShowDetail(RetrieveUpdateDestroyAPIView):
 #     # permission_classes = (IsOwnerOrReadOnly,)
 #     queryset = Show.objects.all()
 #     serializer_class = ShowSerializer
-
+#
 # class MovieList(ListCreateAPIView):
 #     queryset = Movie.objects.all()
 #     serializer_class = MovieSerializer
-
-
+#
+#
 # class MovieDetail(RetrieveUpdateDestroyAPIView):
 #     # permission_classes = (IsOwnerOrReadOnly,)
 #     queryset = Movie.objects.all()
