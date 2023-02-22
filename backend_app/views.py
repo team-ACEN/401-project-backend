@@ -4,6 +4,13 @@ import os
 import requests
 import json
 load_dotenv()
+# from rest_framework.generics import (
+#     ListCreateAPIView,
+#     RetrieveUpdateDestroyAPIView,
+# )
+# from .models import Show, Movie
+# # from .permissions import IsOwnerOrReadOnly
+# from .serializers import ShowSerializer, MovieSerializer
 
 def get_genres(request):
     url = 'https://partner-api.reelgood.com/v1.0/meta/genres'
