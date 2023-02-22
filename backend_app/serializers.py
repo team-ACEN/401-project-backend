@@ -11,3 +11,4 @@ class ShowSerializer(serializers.ModelSerializer):
     class Meta:
         model = Show
         fields = "__all__"
+
