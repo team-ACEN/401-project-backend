@@ -31,17 +31,17 @@ def trim_genres(data):
     return trimmed_data
 
 #Have to figure out where/how we are getting the search request from the frontend
-def search(request):
-    term='Titanic'
+def search(request, term):
+    # term='Titanic'
     url = f'https://partner-api.reelgood.com/v1.0/content/search?term={term}&all_services=true&content_type=Both'
     headers = {
         'Accept': 'text/plain',
         'x-api-key': os.getenv('API_KEY')
     }
     response = requests.get(url, headers=headers)
-    print(response)
     if response.status_code == 200:
-        return HttpResponse(response)
+        data = json.loads(response.content)
+        return JsonResponse(data, safe=False)
     return JsonResponse({"error": f"Failed to retrieve genres from Reelgood API due to {response.status_code}"})
 
 def get_services(request):
