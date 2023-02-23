@@ -24,6 +24,7 @@ urlpatterns = [
     path('streaming_services/genres/', views.get_genres, name='streaming_services_genres'),
     path('streaming_services/search/', views.search, name='streaming_services_search'),
     path('streaming_services/services/', views.get_services, name='streaming_services_services'),
+    path('streaming_services/popular/', views.get_popular_based_on_service, name='streaming_services_popular'),
     path("api/users/", include("accounts.urls")),
     path("api-auth/", include("rest_framework.urls")),
     path(
