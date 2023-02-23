@@ -31,8 +31,8 @@ def trim_genres(data):
     return trimmed_data
 
 #Have to figure out where/how we are getting the search request from the frontend
-def search(request, term):
-    # term='Titanic'
+def search(request):
+    term=request.GET.get('term', '')
     url = f'https://partner-api.reelgood.com/v1.0/content/search?term={term}&all_services=true&content_type=Both'
     headers = {
         'Accept': 'text/plain',
